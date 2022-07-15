@@ -238,6 +238,7 @@ Navbar
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+/* look at this tomorrow morning */
 .nav-link {
   display: block;
   padding: 1rem 2rem;
@@ -249,8 +250,8 @@ Navbar
   font-size: 1rem;
 }
 .nav-link:hover {
-  color: var(--clr-primary-1);
-  background: var(--clr-primary-8);
+  color: var(--clr-grey-1);
+  background: var(--clr-grey-1);
   padding-left: 2.25rem;
 }
 /* 280px */
@@ -263,10 +264,14 @@ Navbar
 .show-links {
   height: 280px;
 }
-@media screen and (min-width: 992) {
+.nav-logo {
+  width: 2.5rem;
+}
+
+@media screen and (min-width: 992px) {
   /* hide toggle button */
   .navbar {
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
   }
   .nav-toggle {
     display: none;
@@ -314,7 +319,7 @@ Hero
 */
 .hero {
   min-height: 100vh;
-  background: -webkit-gradient(
+  background: (
     linear,
     left top,
     left bottom,
@@ -359,7 +364,7 @@ Hero
 /* for smaller screen phones and tablets */
 @media screen and (min-width: 768px) {
   .hero {
-    background: -webkit-gradient(
+    background: (
         linear,
         left top,
         left bottom,
