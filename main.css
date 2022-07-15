@@ -159,6 +159,7 @@ p {
   letter-spacing: var(--spacing);
   display: inline-block;
   /* font-weight: 700; */
+  -webkit-transition: var(--transition);
   transition: var(--transition);
   font-size: 0.875rem;
   border: 2px solid transparent;
@@ -216,8 +217,11 @@ Navbar
   margin: 0 auto;
 }
 .nav-header {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center;
   padding: 1rem 2rem;
 }
@@ -227,15 +231,18 @@ Navbar
   font-size: 1.5rem;
   color: var(--clr-grey-3);
   cursor: pointer;
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 .nav-toggle:hover {
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 .nav-link {
   display: block;
   padding: 1rem 2rem;
   text-transform: var(--spacing);
+  -webkit-transition: var(--transition);
   transition: var(--transition);
   color: var(--clr-grey-1);
   cursor: pointer;
@@ -250,6 +257,7 @@ Navbar
 .nav-links {
   height: 0;
   overflow: hidden;
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 .show-links {
@@ -264,14 +272,18 @@ Navbar
     display: none;
   }
   .nav-center {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     align-items: center;
     /* optional */
     flex-wrap: wrap;
   }
   .nav-links {
     height: auto;
+    display: -webkit-box;
     display: flex;
   }
   .nav-header {
@@ -287,6 +299,7 @@ Navbar
     background: transparent;
   }
   .nav-icons {
+    display: -webkit-box;
     display: flex;
   }
   .nav-icon {
@@ -301,9 +314,19 @@ Hero
 */
 .hero {
   min-height: 100vh;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(44, 174, 186, 0.329)),
+    to(rgba(0, 0, 0, 0.7))
+  );
   background: linear-gradient(rgba(44, 174, 186, 0.329), rgba(0, 0, 0, 0.7));
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 .hero-banner {
@@ -336,6 +359,14 @@ Hero
 /* for smaller screen phones and tablets */
 @media screen and (min-width: 768px) {
   .hero {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(44, 174, 186, 0.329)),
+        to(rgba(0, 0, 0, 0.7))
+      ),
+      url("../images/main.jpeg") center/cover no-repeat;
     background: linear-gradient(rgba(44, 174, 186, 0.329), rgba(0, 0, 0, 0.7)),
       url("../images/main.jpeg") center/cover no-repeat;
   }
@@ -372,13 +403,16 @@ About
 }
 @media screen and (min-width: 992px) {
   .about-center {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 20px;
   }
   .about-img,
   .about-info {
+    -webkit-box-flex: 0;
     flex: 0 0 calc(50% - 2rem);
     margin-bottom: 0;
     align-self: center;
@@ -403,11 +437,14 @@ Services
 }
 @media screen and (min-width: 576px) {
   .services-center {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   .service {
+    -webkit-box-flex: 0;
     flex: 0 0 calc(50% - 1rem);
     margin-bottom: 1rem;
   }
@@ -415,6 +452,7 @@ Services
   }
   /* kolommen wijder maken onder onze diensten */
   .service {
+    -webkit-box-flex: 0;
     flex: 0 0 calc(30% - 2rem);
     margin-bottom: 1rem;
     font-size: 20px;
@@ -422,6 +460,7 @@ Services
   @media screen and (min-width: 1170px) {
   }
   .service {
+    display: -webkit-box;
     display: flex;
     text-align: left;
   }
@@ -437,6 +476,7 @@ Metaal en ijzer
 ===============
 */
 .metal-card {
+  -webkit-transition: var(--transition);
   transition: var(--transition);
   background: var(--clr-grey-10);
   box-shadow: var(--light-shadow);
@@ -444,6 +484,7 @@ Metaal en ijzer
 }
 .metal-card:hover {
   box-shadow: var(--dark-shadow);
+  -webkit-transform: scale(1.02);
   transform: scale(1.02);
 }
 .metal-img-container {
@@ -451,6 +492,7 @@ Metaal en ijzer
 }
 .metal-img {
   height: 15rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 /* maybe remove if it doenst look nice its in the right 
@@ -472,9 +514,12 @@ down corner */
 }
 
 .metal-footer {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   flex-wrap: wrap;
+  -webkit-box-align: center;
   align-items: center;
 }
 .metal-footer p {
@@ -488,16 +533,20 @@ down corner */
 }
 @media screen and (min-width: 768px) {
   .metal-center {
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
     justify-content: space-between;
   }
   .metal-card {
+    -webkit-box-flex: 0;
     flex: 0 0 calc(50% - 2rem);
   }
 }
 @media screen and (min-width: 1170px) {
   .metal-card {
+    -webkit-box-flex: 0;
     flex: 0 0 calc(30% - 2rem);
   }
 }
@@ -516,11 +565,13 @@ Contact
   color: var(--clr-white);
 }
 .contact-form {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   max-width: 28rem;
 }
 .form-control {
+  -webkit-box-flex: 1;
   flex: 1 1 auto;
   color: var(--clr-grey-5);
 }
@@ -534,6 +585,18 @@ Contact
   background: var(--clr-white);
   text-transform: capitalize;
   border: transparent;
+}
+.form-control::-webkit-input-placeholder {
+  color: inherit;
+}
+.form-control::-moz-placeholder {
+  color: inherit;
+}
+.form-control:-ms-input-placeholder {
+  color: inherit;
+}
+.form-control::-ms-input-placeholder {
+  color: inherit;
 }
 .form-control::placeholder {
   color: inherit;
@@ -550,6 +613,7 @@ Contact
   color: var(--clr-white);
   padding: 0.375rem 1.31rem;
   letter-spacing: var(--spacing);
+  -webkit-transition: var(--transition);
   transition: var(--transition);
   cursor: pointer;
 }
@@ -561,15 +625,21 @@ Contact
 
 @media screen and (min-width: 992px) {
   .contact-center {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: stretch;
+    -webkit-box-align: center;
     align-items: center;
   }
   .contact-form {
     /* align-self: flex-start; */
+    -webkit-box-flex: 0;
     flex: 0 1 auto;
     max-width: 100%;
     padding-left: 2rem;
@@ -579,6 +649,7 @@ Contact
     font-size: larger;
   }
   .contact-area {
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     font-size: larger;
@@ -587,15 +658,21 @@ Contact
 
 @media screen and (min-width: 768px) {
   .contact-center {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: stretch;
+    -webkit-box-align: center;
     align-items: center;
   }
   .contact-form {
     align-self: flex-start;
+    -webkit-box-flex: 0;
     flex: 0 1 auto;
     max-width: 100%;
     padding-left: 2rem;
@@ -606,6 +683,7 @@ Contact
     font-size: larger;
   }
   .contact-area {
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     font-size: larger;
@@ -613,16 +691,22 @@ Contact
 }
 @media screen and (min-width: 280px) {
   .contact-center {
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
     justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
 
     align-content: stretch;
+    -webkit-box-align: center;
     align-items: center;
   }
   .contact-form {
     align-self: flex-start;
+    -webkit-box-flex: 0;
     flex: 0 1 auto;
     max-width: 100%;
     padding-left: 2rem;
@@ -632,6 +716,7 @@ Contact
     font-size: larger;
   }
   .contact-area {
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     font-size: larger;
@@ -656,7 +741,9 @@ Footer
   padding-right: 2rem;
 }
 .footer-links {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
@@ -667,6 +754,7 @@ Footer
   font-size: 1rem;
   margin-right: 1rem;
   letter-spacing: var(--spacing);
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 .footer-link:hover {
