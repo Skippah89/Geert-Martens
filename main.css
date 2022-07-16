@@ -95,7 +95,26 @@ ul {
 a {
   text-decoration: none;
 }
+a:hover {
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+}
 
+.Privacyverklaring {
+  color: white;
+}
+.Privacyverklaring:visited {
+  color: white;
+}
+/* footer routeplanner link  */
+
+.Routeplanner {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+}
+.Routeplanner:visited {
+  color: var(--clr-white);
+}
 img:not(.nav-logo) {
   width: 100%;
   display: block;

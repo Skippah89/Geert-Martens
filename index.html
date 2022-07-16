@@ -34,21 +34,24 @@
         <!-- end of single link -->
                 <!-- second link -->
         <li>
-          <a href="#About" class="nav-link scroll-link">About</a>
+          <a href="#overons" class="nav-link scroll-link">About</a>
         </li>
         <!-- end of second link -->
                 <!-- third link -->
         <li>
-          <a href="#Diensten" class="nav-link scroll-link">Diensten</a>
+          <a href="#services" class="nav-link scroll-link">Diensten</a>
         </li>
         <!-- end of third link -->
                 <!-- fourth link -->
         <li>
-          <a href="#Contacteer ons" class="nav-link scroll-link">Contacteer ons</a>
+          <a href="#contact-title" class="nav-link scroll-link">Contacteer ons</a>
         </li>
         <!-- end of fourth link -->
+                <li>
+          <a href="https://www.google.be/maps/dir//Leistraat+33,+9881+Aalter/@51.104654,3.4652449,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c368f5a5707431:0x99f1cda81093c12d!2m2!1d3.5002638!2d51.1046473" target="_blank" class="nav-link">Routeplanner</a>
+        </li>
       </ul>
-      <!-- end of footer links -->
+      <!-- end of head links -->
         </div>
       </nav>
       <!-- hero -->
@@ -69,7 +72,7 @@
     <section class="section" id="about">
       <!-- section-title -->
       <div class="section-title">
-        <h2>Over <span>Ons</span></h2>
+        <h2 id="overons">Over <span>Ons</span></h2>
       </div>
       <!-- end of title -->
       <div class="section-center about-center">
@@ -370,7 +373,7 @@
           </div>
           <!-- metal info -->
           <div class="metal-info">
-            <h4>Contacteer ons</h4>
+            <h4 id="Contacteer-ons">Contacteer ons</h4>
             <p>
               Geert Martens <br />
               Leistraat 33 <br />
@@ -413,7 +416,7 @@
         </article>
         <!-- end of sixth metal card -->
       </div>
-      <div class="metal-btn">
+      <div class="metal-btn scroll-link">
         <a href="#contact-us-verzenden" class="btn">Contacteer ons</a>
       </div>
     </section>
@@ -421,7 +424,7 @@
     <section class="section contact" id="contact">
       <div class="section-center contact-center">
         <!-- contact title -->
-        <article class="contact-title">
+        <article class="contact-title" id="contact-title">
           <h3>Wil u in contact komen met ons?</h3>
           <h3>Stuur een bericht via het formulier of bel op 09 374 11 96.</h3>
         </article>
@@ -462,13 +465,15 @@
                 name="telephone"
                 id="telephone"
                 placeholder="Uw Nummer"
+                required=""
               />
               <label for="complaint">Adres</label>
               <input
                 type="huisadres"
                 name="huisadres"
                 id="huisadres"
-                placeholder="Uw Adres"
+                placeholder="Uw Adres" 
+                required=""
               />
               <label for="complaint">Gemeente</label>
               <input
@@ -476,6 +481,7 @@
                 name="gemeente"
                 id="gemeente"
                 placeholder="Uw Gemeente"
+                required=""
               />
               <label for="complaint">Bericht</label>
               <textarea
@@ -509,23 +515,28 @@
         <!-- end of single link -->
                 <!-- second link -->
         <li>
-          <a href="#About" class="footer-link scroll-link">About</a>
+          <a href="#overons" class="footer-link scroll-link">About</a>
         </li>
         <!-- end of second link -->
                 <!-- third link -->
         <li>
-          <a href="#Diensten" class="footer-link scroll-link">Diensten</a>
+          <a href="#services" class="footer-link scroll-link">Diensten</a>
         </li>
         <!-- end of third link -->
                 <!-- fourth link -->
         <li>
-          <a href="#Contacteer ons" class="footer-link scroll-link">Contacteer ons</a>
+          <a href="#contact-title" class="footer-link scroll-link">Contacteer ons</a>
         </li>
         <!-- end of fourth link -->
+                 <!-- fifth link -->
+        <li>
+          <a href="https://www.google.be/maps/dir//Leistraat+33,+9881+Aalter/@51.104654,3.4652449,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c368f5a5707431:0x99f1cda81093c12d!2m2!1d3.5002638!2d51.1046473" target="_blank" class="Routeplanner footer-link" >Routeplanner</a>
+        </li>
+        <!-- end of fifth link -->
       </ul>
       <!-- end of footer links -->
       <p class="copyright">
-        copyright &copy; Geert Martens <span id="date"></span> |<a href="privary-verklaring">Privacyverklaring</a>
+        copyright &copy; Geert Martens <span id="date"></span> |<a href="privary-verklaring" class="Privacyverklaring" target="_blank">Privacyverklaring</a>
       </p>
     </footer>
     <!-- end of footer -->
