@@ -270,7 +270,7 @@ Navbar
 }
 .nav-link:hover {
   color: var(--clr-grey-1);
-  background: var(--clr-grey-1);
+  background: var(--clr-grey-7);
   padding-left: 2.25rem;
 }
 /* 280px */
