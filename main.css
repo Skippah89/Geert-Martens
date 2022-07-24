@@ -63,7 +63,7 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
+  --clr-white: white;
   --ff-primary: "Lato", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
@@ -145,6 +145,7 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -285,6 +286,12 @@ Navbar
 }
 .nav-logo {
   width: 2.5rem;
+  margin-left: -0.5rem;
+}
+.nav-logo-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: scale-down;
 }
 
 @media screen and (min-width: 992px) {
@@ -327,10 +334,56 @@ Navbar
     display: flex;
   }
   .nav-icon {
-    margin-right: 0.7rem;
+    margin-right: 10.7rem;
     color: var(--clr-grey-5);
   }
 }
+/* LOGO IN MIDDLE BETTER */
+@media screen and (min-width: 668px) {
+  /* hide toggle button */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-center {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    /* optional */
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    height: auto;
+    display: -webkit-box;
+    display: flex;
+  }
+  .nav-header {
+    padding: 0 0;
+  }
+  .nav-link {
+    padding: 0 0;
+    margin-right: 0.7rem;
+  }
+  .nav-link:hover {
+    padding: 0;
+    color: var(--clr-grey-5);
+    background: transparent;
+  }
+  .nav-icons {
+    display: -webkit-box;
+    display: flex;
+  }
+  .nav-icon {
+    margin-right: 10.7rem;
+    color: var(--clr-grey-5);
+  }
+}
+
 /*
 =============== 
 Hero
@@ -380,6 +433,14 @@ Hero
   color: var(--clr-white);
   border-color: var(--clr-white);
 }
+p.phone-number {
+  margin-top: 2rem;
+  font-size: larger;
+  text-align: left;
+}
+p.phone-number-two {
+  margin-top: 1.5rem;
+}
 /* for smaller screen phones and tablets */
 @media screen and (min-width: 768px) {
   .hero {
@@ -401,6 +462,7 @@ Hero
     max-width: 45rem;
   }
 }
+
 /*
 =============== 
 About
@@ -419,11 +481,12 @@ About
 }
 .lid-van-ovam {
   float: right;
+  padding-top: 0.5rem;
 }
 .btn-lid-van {
   float: right;
   /* button hight might need to change this later */
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 992px) {
   .about-center {
@@ -458,6 +521,10 @@ Services
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
+}
+.belangrijk {
+  text-decoration: underline;
+  color: #db3a4b;
 }
 @media screen and (min-width: 576px) {
   .services-center {
